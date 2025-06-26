@@ -1,13 +1,13 @@
 // src/app/layout.tsx
 
 import './globals.css';
-import { Noto_Sans } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
-const noto = Noto_Sans({
+const raleway = Raleway({
   subsets: ['latin'],
   weight: ['100','200','300','400', '500', '600', '700', '800', '900'], // You can customize this
   variable: '--font-body',
@@ -65,7 +65,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={noto.variable}>
+    <html lang="en" className={raleway.variable}>
       <head>
         {/* ✅ JSON-LD Structured Data for Google Logo */}
         <link rel="canonical" href="https://wozarnold.org" />

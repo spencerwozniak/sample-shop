@@ -2,7 +2,7 @@
 
 /* Root-level base styles */
 :root {
-  --font-body: 'Noto Sans', sans-serif;
+  --font-body: 'Raleway', sans-serif;
   --color-text: #4e443b;
   --color-bg: white;
 }
