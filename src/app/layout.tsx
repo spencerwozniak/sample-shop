@@ -2,51 +2,52 @@
 
 import './globals.css';
 import { Raleway } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
 const raleway = Raleway({
   subsets: ['latin'],
-  weight: ['100','200','300','400', '500', '600', '700', '800', '900'], // You can customize this
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-body',
 });
 
 export const metadata = {
-  title: 'Woz-Arnold Foundation | Charity Tournaments for San Diego',
-  description: 
-    'The Woz-Arnold Foundation organizes sporting tournaments in San Diego to raise funds for the community.',
+  title: 'Muhl Jewelers | Family Jeweler in Coronado, California',
+  description:
+    'Muhl Jewelers is Coronado’s trusted family-owned jewelry store since 1921, offering custom designs, repairs, and heirloom restoration. Located on Orange Avenue in the historic Coronado Bank Building.',
   icons: {
-    icon: '/woz-foundation.png',
-    shortcut: '/woz-foundation.png',
-    apple: '/woz-foundation.png'
+    icon: '/crown-square.png',
+    shortcut: '/crown-square.png',
+    apple: '/crown-square.png'
   },
   keywords: [
-    'Woz-Arnold Foundation',
-    'San Diego charity events',
-    'ping pong tournament San Diego',
-    'homeless support San Diego',
-    'charity sports events',
-    'nonprofit organization San Diego',
-    'fundraisers for the homeless',
-    'community events San Diego'
-  ],  
-  authors: [{ name: 'Woz-Arnold Foundation Team', url: 'https://wozarnold.org' }],
-  creator: 'Woz-Arnold Foundation',
-  metadataBase: new URL('https://wozarnold.org'),
+    'Muhl Jewelers',
+    'Coronado jeweler',
+    'family jeweler Coronado',
+    'jewelry repair',
+    'custom jewelry Coronado',
+    'engagement rings',
+    'heirloom restoration',
+    'Coronado small business',
+    'San Diego jewelry'
+  ],
+  authors: [{ name: 'Muhl Jewelers', url: 'https://www.facebook.com/p/Muhl-Jewelers-100057400812240/' }],
+  creator: 'Muhl Jewelers',
+  metadataBase: new URL('https://muhljewelers.com'),
   openGraph: {
-    title: 'Woz-Arnold Foundation | Charity Tournaments for San Diego',
-    description: 
-      'The Woz-Arnold Foundation organizes sporting tournaments in San Diego to raise funds for the community.',
-    url: 'https://wozarnold.org',
-    siteName: 'Woz-Arnold Foundation',
+    title: 'Muhl Jewelers | Family Jeweler in Coronado, California',
+    description:
+      'Muhl Jewelers is Coronado’s trusted family-owned jewelry store since 1921, offering custom designs, repairs, and heirloom restoration. Located on Orange Avenue in the historic Coronado Bank Building.',
+    url: 'https://muhljewelers.com',
+    siteName: 'Muhl Jewelers',
     images: [
       {
-        url: 'https://wozarnold.org/woz-foundation.png',
+        url: 'https://muhljewelers.com/muhl-logo-white.png',
         width: 1200,
         height: 630,
-        alt: 'Woz-Arnold Foundation Logo',
+        alt: 'Muhl Jewelers Logo',
       },
     ],
     locale: 'en_US',
@@ -54,12 +55,12 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Woz-Arnold Foundation | Charity Tournaments for San Diego',
-    description: 
-      'The Woz-Arnold Foundation organizes sporting tournaments in San Diego to raise funds for the community.',
-    site: '@wozfoundation',
-    creator: '@wozfoundation',
-    images: ['https://wozarnold.org/woz-foundation.png'],
+    title: 'Muhl Jewelers | Family Jeweler in Coronado, California',
+    description:
+      'Muhl Jewelers is Coronado’s trusted family-owned jewelry store since 1921, offering custom designs, repairs, and heirloom restoration. Located on Orange Avenue in the historic Coronado Bank Building.',
+    site: '@muhljewelers',
+    creator: '@muhljewelers',
+    images: ['https://muhljewelers.com/muhl-logo-white.png'],
   },
 };
 
@@ -67,49 +68,65 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={raleway.variable}>
       <head>
-        {/* ✅ JSON-LD Structured Data for Google Logo */}
-        <link rel="canonical" href="https://wozarnold.org" />
-
+        {/* ✅ JSON-LD Structured Data for Local Business */}
+        <link rel="canonical" href="https://muhljewelers.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "NGO",
-              "name": "Woz-Arnold Foundation",
-              "description": "Woz-Arnold Foundation organizes local sports tournaments to raise money for the community.",
-              "url": "https://www.wozfoundation.org",
-              "logo": "https://www.wozfoundation.org/woz-foundation.png",
-              "sameAs": [
-                "https://www.spencerwozniak.com",
-                "https://www.linkedin.com/company/woz-foundation"
-              ],
-              "founder": {
-                "@type": "Person",
-                "name": "Spencer Wozniak"
+              "@type": "JewelryStore",
+              "name": "Muhl Jewelers",
+              "image": "https://muhljewelers.com/crown-square.png",
+              "description": "Muhl Jewelers is Coronado’s trusted family-owned jewelry store since 1921, offering custom designs, repairs, and heirloom restoration.",
+              "telephone": "+16194354541",
+              "url": "https://muhljewelers.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1130 Orange Ave",
+                "addressLocality": "Coronado",
+                "addressRegion": "CA",
+                "postalCode": "92118",
+                "addressCountry": "US"
               },
-              "location": {
-                "@type": "Place",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "San Diego",
-                  "addressRegion": "CA",
-                  "postalCode": "92101",
-                  "addressCountry": "USA"
-                }}
+              "sameAs": [
+                "https://www.facebook.com/p/Muhl-Jewelers-100057400812240/",
+                "https://www.instagram.com/muhl.jewelers/"
+              ],
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "10:00",
+                  "closes": "17:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "15:00"
+                }
+                // Sunday and Monday omitted = closed
+              ],
+              "parentOrganization": {
+                "@type": "Organization",
+                "name": "Muhl Jewelers"
+              }
             })
           }}
         />
-
       </head>
       <body>
         <Nav />
-          {children}
-        <section>
-          <Footer />
-        </section> 
+        {children}
+        <Footer />
       </body>
-      <GoogleAnalytics gaId="G-DQCNM0XVBZ" />
+      <GoogleAnalytics gaId="PLACEHOLDER" />
     </html>
   );
 }

@@ -35,37 +35,34 @@ h1, h2, h3 {
   font-family: var(--font-body);
 }
 
-/* With this safer version */
-h1 {
-  line-height: 1.1;
-}
-
 h4, h5, h6 {
   font-weight: 700;
-}
-
-p {
-  font-weight: 600;
-}
-
-a {
-  font-weight: 700;
-  color: #01675d;
-  text-decoration: inherit;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-  color: #919191;
 }
 
 i, em {
   font-style: italic;
 }
 
-/* Optional: Override light-mode-specific buttons */
-@media (prefers-color-scheme: light) {
-  button {
-    background-color: #000;
-  }
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #46b1a8;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  border-radius: 9999px;
+}
+
+.animated-underline:hover::after,
+.animated-underline:focus::after {
+  transform: scaleX(1);
 }

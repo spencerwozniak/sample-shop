@@ -1,52 +1,55 @@
-import { FaChevronRight } from 'react-icons/fa'
-import Link from 'next/link'
+// app/components/HomeHero.tsx
+
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
 
 export default function HomeHero() {
-    return (
-
-    <div className="z-10 py-10 relative overflow-hidden before:absolute before:top-0 before:left-[calc(47.5%)] before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-1 before:transform before:-translate-x-1/2">
-    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
-        {/* Announcement Banner */}
-        <div className="flex justify-center">
-        <Link 
-        className="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-xs text-gray-600 p-2 px-3 rounded-full transition hover:border-gray-300 focus:outline-hidden focus:border-gray-300" 
-        href="/events/summer-smash-2025"
-        >
-            Upcoming Pickleball Tournament
-            <span className="flex items-center gap-x-1">
-            <span className="border-s border-gray-200 text-blue-600 ps-2">Register</span>
-            <svg className="shrink-0 size-4 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  return (
+    <section className="w-full bg-white mt-45">
+      <div className="max-w-8xl mx-auto md:pr-10 lg:pr-20 xl:px-30 flex flex-col md:flex-row items-center gap-10">
+        {/* Video Section */}
+        <div className="w-full md:w-3/4 flex-shrink-0">
+          <div className="
+            aspect-square
+            md:aspect-15/9
+            w-full
+            overflow-hidden
+            bg-gray-100
+          ">
+            <video
+              className="w-full h-full object-cover"
+              src="/jewelery-sample.mp4"
+              poster="/jewelery-sample.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              disablePictureInPicture
+            />
+          </div>
+        </div>
+        {/* Text Section */}
+        <div className="px-2 md:px-0 w-full md:w-1/2 flex flex-col items-center text-center">
+          <h1 className="text-2xl xl:text-3xl font-semibold mb-4 tracking-tight text-black">
+          Timeless Jewelry, <br className='hidden md:block'/>Modern Designs
+          </h1>
+          <p className="mb-5 text-md font-light text-black max-w-prose leading-7">
+          Muhl Jewelers has been family-run since 1921 and offers one of-a-kind pieces, taking old family jewelry and turning it into modern designs.
+          </p>
+          <Link
+            href="https://www.tiffany.com/jewelry/shop/most-popular-jewelry/"
+            target="_self"
+            className="inline-block text-black px-6 py-2 border border-black font-medium text-sm"
+          >
+            <span className='animated-underline'>
+            Shop Now
             </span>
-        </Link>
+          </Link>
         </div>
-        {/* End Announcement Banner */}
-
-        {/* Title */}
-        <div className="mt-5 max-w-xl text-center mx-auto">
-        <h1 className="block font-bold text-gray-800 text-4xl md:text-5xl">
-            Woz-Arnold Foundation
-        </h1>
-        </div>
-        {/* End Title */}
-
-        <div className="mt-5 max-w-3xl text-center mx-auto">
-        <p className="text-lg text-gray-600">
-        We host local sporting tournaments in San Diego to raise money for the community.
-        </p>
-        </div>
-
-        {/* Buttons */}
-        <div className="mt-8 gap-3 flex justify-center">
-        <Link 
-        className="!text-white inline-flex justify-center items-center gap-x-3 text-center bg-linear-to-tl from-blue-600 to-violet-600 !hover:from-violet-600 !hover:to-blue-600 focus:outline-hidden focus:from-violet-600 focus:to-blue-600 border border-transparent text-white text-sm font-medium rounded-full py-3 px-4" 
-        href="/events"
-        >
-            See Our Upcoming Events <FaChevronRight />
-        </Link>
-        </div>
-        {/* End Buttons */}
-    </div>
-    </div>
-
-    )
-};
+      </div>
+    </section>
+  );
+}

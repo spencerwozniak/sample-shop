@@ -1,8 +1,10 @@
 'use client'
 
 import HomeHero from './HomeHero';
-import Quote from './Quote';
-import EventsBrowser from './EventsBrowser';
+import HomeServicesSection from './HomeServicesSection';
+import WhyChooseUs from './WhyChooseUs';
+import FAQSection from './FAQSection';
+import faqData from '@/data/faqs.json';
 
 export default function LandingPage() {
   return (
@@ -10,16 +12,14 @@ export default function LandingPage() {
     <section>
       <HomeHero />
     </section>
-    <section>
-      <Quote 
-        quote="At The Woz-Arnold Foundation, we believe community can be built through sport. Every event we host helps provide hope to those living on the margins in San Diego."
-        author="Spencer Wozniak"
-        info="Co-Founder"
-        image='/spencer-headshot.jpg'
-      />
+    <section className=''>
+      <HomeServicesSection />
+    </section>
+    <section className=''>
+      <WhyChooseUs />
     </section>
     <section>
-      <EventsBrowser />
+    <FAQSection data={faqData} />
     </section>
     </>
   );

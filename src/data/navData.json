@@ -1,7 +1,11 @@
 [
     {
-      "label": "Events",
-      "link": "/events"
+      "label": "Shop",
+      "link": "/shop"
+    },
+    {
+      "label": "Projects",
+      "link": "/projects"
     },
     {
       "label": "About",

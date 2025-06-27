@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaChevronRight } from "react-icons/fa";
 
 function NotFound() {
   return (
@@ -7,7 +8,11 @@ function NotFound() {
       <h1 className="block text-9xl font-bold">404</h1>
       <p className="mt-3">Oops, something went wrong.</p>
       <p>Sorry, we couldn’t find your page.</p>
-      <Link href="/" className='w-40 mt-4'>Return Home</Link> 
+      <Link href="/" className='w-40 mt-4'>
+      <span className="animated-underline">
+      Return Home <FaChevronRight className="inline w-2 h-2 mb-0.5 ml-2" />
+      </span>
+      </Link> 
     </div>
     </>
   );
