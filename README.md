@@ -1,1 +1,1 @@
-Woz Foundation
+Website for a Jewelry Store
